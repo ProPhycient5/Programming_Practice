@@ -1,2 +1,2 @@
 # Programming_Practice
-I have jotted solution the various coding question that I have come across in JS.
+I have jotted down the solutions of various coding questions that I have come across in JS.
