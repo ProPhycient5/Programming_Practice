@@ -5,7 +5,7 @@ function quickSort(arr){
   return arr;
   
   let pivot = arr[0];
-  let left = []; right = [];
+  let left = [], right = [];
   
   for(let i = 1; i < arr.length; i++){
     if(arr[i] <= pivot){
@@ -28,4 +28,6 @@ console.log(quickSort(numbers));
 //Space Complexity - 
 //Average case - O(log n)
 //Worst case - O(n)
+
+//This approach uses extra arrays (left, right) → space is O(n) instead of O(log n) [recursive stack].
 
