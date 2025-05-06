@@ -54,6 +54,22 @@ class BinarySearchTree {
         }
         return false;
     }
+
+    min(root){
+        if(!root.left){
+          return root.value;
+        }else {
+          return this.min(root.left)
+        }
+      }
+      
+      max(root){
+        if(!root.right){
+          return root.value;
+        }else{
+          return this.max(root.right)
+        }
+      }
 }
 
 
@@ -68,6 +84,9 @@ tree.insert(15);
 tree.insert(1);
 // tree.remove(170);
 console.log(JSON.stringify(traverse(tree.root)));
+
+console.log(tree.min(tree.root))
+console.log(tree.max(tree.root))
 // console.log(tree.lookup(20));
 //     9
 //  4     20
