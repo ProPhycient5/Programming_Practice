@@ -55,21 +55,40 @@ class BinarySearchTree {
         return false;
     }
 
-    min(root){
-        if(!root.left){
-          return root.value;
-        }else {
-          return this.min(root.left)
+    min(root) {
+        if (!root.left) {
+            return root.value;
+        } else {
+            return this.min(root.left)
         }
-      }
-      
-      max(root){
-        if(!root.right){
-          return root.value;
-        }else{
-          return this.max(root.right)
+    }
+
+    max(root) {
+        if (!root.right) {
+            return root.value;
+        } else {
+            return this.max(root.right)
         }
-      }
+    }
+
+    breadthFirstSearch() {
+        let currentNode = this.root;
+        let list = [];
+        let queue = [];
+        queue.push(currentNode);
+
+        while (queue.length > 0) {
+            currentNode = queue.shift();
+            list.push(currentNode.value);
+            if (currentNode.left) {
+                queue.push(currentNode.left);
+            }
+            if (currentNode.right) {
+                queue.push(currentNode.right);
+            }
+        }
+        return list;
+    }
 }
 
 
@@ -87,6 +106,7 @@ console.log(JSON.stringify(traverse(tree.root)));
 
 console.log(tree.min(tree.root))
 console.log(tree.max(tree.root))
+console.log(bst.breadthFirstSearch())
 // console.log(tree.lookup(20));
 //     9
 //  4     20
