@@ -20,19 +20,3 @@ function fibonacciIterative(number) {            //O(n)
     return output[number];
 }
 console.log(fibonacciIterative(7))
-
-function fibonacciCache(number) {
-    let cache = {};
-    return function (number) {
-        if (number in cache)
-            return cache[number]
-        else{
-         if(number <= 2){
-            return number;
-         }else{
-            cache[number] = fibonacciCache(n-1) + fibonacciCache(n-2);
-            return cache[number];
-         }
-        }
-    }
-}
