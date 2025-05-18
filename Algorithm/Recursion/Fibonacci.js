@@ -9,8 +9,6 @@ function fibonacciRecursive(number) {           //O(2^n)
 
 // console.log(fibonacciRecursive(6))
 
-
-
 function fibonacciIterative(number) {            //O(n)
     let output = [0, 1]
 
@@ -22,3 +20,19 @@ function fibonacciIterative(number) {            //O(n)
     return output[number];
 }
 console.log(fibonacciIterative(7))
+
+function fibonacciCache(number) {
+    let cache = {};
+    return function (number) {
+        if (number in cache)
+            return cache[number]
+        else{
+         if(number <= 2){
+            return number;
+         }else{
+            cache[number] = fibonacciCache(n-1) + fibonacciCache(n-2);
+            return cache[number];
+         }
+        }
+    }
+}
