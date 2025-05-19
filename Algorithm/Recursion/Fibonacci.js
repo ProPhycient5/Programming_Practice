@@ -9,6 +9,7 @@ function fibonacciRecursive(number) {           //O(2^n)
 
 // console.log(fibonacciRecursive(6))
 
+//This is bottom-up solution
 function fibonacciIterative(number) {            //O(n)
     let output = [0, 1]
 
