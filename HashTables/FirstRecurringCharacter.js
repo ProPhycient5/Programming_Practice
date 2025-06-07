@@ -12,7 +12,7 @@
 // return 5 because the pairs are before 2,2
 
 function firstRecurringCharacter(input) {
-  let uniqueObj = [];
+  let uniqueObj = {};
   for (let i = 0; i < input.length; i++){
     if (input[i] in uniqueObj)  return input[i]; 
     else uniqueObj[input[i]] = input[i];
