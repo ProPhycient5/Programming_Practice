@@ -5,12 +5,10 @@
 //Input-["a", "a", "b", "a"]
 //Output-a2ba
 
-## The above sample input and output expect the solution to return a string output with character with its corresponding counter
-## This is Coding question from `NinjaCart` Round-2, which I was able to resolve.
+// The above sample input and output expect the solution to return a string output with character with its corresponding counter
+// This is Coding question from `NinjaCart` Round-2, which I was able to resolve.
 
-## Solution:
 
-```
 function counterArr(arr) {
   let finalOutput = "";
   let currentItem = "";
@@ -31,4 +29,4 @@ function counterArr(arr) {
   console.log(finalOutput);
   return finalOutput;
 }
-```
+
